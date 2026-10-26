@@ -1,0 +1,179 @@
+:root {
+  --bleu: #0f6283;
+  --carte: rgb(237, 237, 237);
+  --bouton: rgb(111, 111, 230);
+  --gris: #666;
+  --bordure: #ccc;
+  --erreur: #c0392b;
+  --succes: #1e8449;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header,
+footer {
+  background: var(--bleu);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 24px;
+  padding: 15px;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 30px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.footer-titre {
+  text-align: center;
+}
+
+h3 {
+  margin: 0;
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  font-size: 12px;
+}
+
+main {
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.filtres {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 15px 0;
+}
+.champ-filtre {
+  flex: 1;
+}
+.compteur {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.cours {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.carte {
+  background: var(--carte);
+  border: 2px solid var(--bleu);
+  border-radius: 8px;
+  padding: 14px;
+}
+
+.carte p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: rgb(6, 6, 6);
+}
+
+.carte button,
+.valider {
+  min-height: 44px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.carte button {
+  width: 100%;
+  margin-top: 8px;
+  background: var(--bouton);
+}
+
+.valider {
+  width: 100%;
+  margin-top: 15px;
+  background: var(--bleu);
+}
+
+.selection,
+.reservation,
+.recap {
+  padding: 15px;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  margin: 30px auto;
+}
+
+.reservation h2,
+.recap h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.reservation,
+.recap {
+  max-width: 480px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+select {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px;
+  margin-top: 5px;
+  border: 2px solid var(--bordure);
+  border-radius: 4px;
+  background: white;
+}
+
+.invalide {
+  border-color: var(--erreur);
+}
+.valide {
+  border-color: var(--succes);
+}
+
+.message {
+  display: block;
+  min-height: 18px;
+  margin-top: 4px;
+  font-size: 13px;
+}
+.message.erreur {
+  color: var(--erreur);
+}
+.message.succes {
+  color: var(--succes);
+}
+
+@media (min-width: 600px) {
+  .cours {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .filtres {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 992px) {
+  .cours {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

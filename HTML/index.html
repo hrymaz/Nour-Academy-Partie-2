@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nour Academy</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <img src="images/vh 1.jpg" alt="Logo Nour Academy" class="logo" />
+      <div class="titre">
+        <h1>Nour Academy</h1>
+        <p>Inscription aux cours de soutien — Nador</p>
+      </div>
+      <ul>
+        <li>Nador Centre</li>
+        <li>Hay Al Matar</li>
+        <li>Selouane</li>
+      </ul>
+    </header>
+
+    <main>
+      <section aria-labelledby="titre-catalogue">
+        <h2 class="badge" id="titre-catalogue">Catalogue des cours</h2>
+
+        <div class="filtres">
+          <div class="champ-filtre">
+            <label for="filtre-niveau">Niveau</label>
+            <select id="filtre-niveau">
+              <option value="">Tous les niveaux</option>
+              <option value="Primaire">Primaire</option>
+              <option value="Collège">Collège</option>
+              <option value="Lycée">Lycée</option>
+              <option value="2e Bac">2e Bac</option>
+            </select>
+          </div>
+
+          <div class="champ-filtre">
+            <label for="filtre-matiere">Matière</label>
+            <select id="filtre-matiere">
+              <option value="">Toutes les matières</option>
+              <option value="Maths">Maths</option>
+              <option value="Physique">Physique</option>
+              <option value="Chimie">Chimie</option>
+              <option value="Français">Français</option>
+              <option value="Anglais">Anglais</option>
+              <option value="SVT">SVT</option>
+              <option value="Arabe">Arabe</option>
+              <option value="Informatique">Informatique</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="compteur" id="compteur" aria-live="polite"></p>
+        <p class="aucun-resultat" id="aucun-resultat" hidden>
+          Aucun cours ne correspond à votre recherche.
+        </p>
+
+        <div class="cours" id="liste-cours"></div>
+      </section>
+
+      <section class="selection" aria-labelledby="titre-selection">
+        <h2 id="titre-selection">Ma sélection</h2>
+        <p class="selection-vide" id="selection-vide">
+          Aucun cours sélectionné.
+        </p>
+        <ul id="liste-selection"></ul>
+        <p class="total">Total mensuel : <strong id="total">0 MAD</strong></p>
+      </section>
+
+      <form class="reservation" id="form-inscription" novalidate>
+        <h2>Inscription</h2>
+        <p class="aide">
+          Remplissez le formulaire ci-dessous pour inscrire votre enfant. Tous
+          les champs sont obligatoires.
+        </p>
+
+        <label for="nom">Nom du parent</label>
+        <input
+          type="text"
+          id="nom"
+          name="nom"
+          placeholder="Votre nom"
+          autocomplete="family-name"
+        />
+        <small class="message" id="nom-msg"></small>
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="exemple@email.com"
+          autocomplete="email"
+        />
+        <small class="message" id="email-msg"></small>
+
+        <label for="tel">Téléphone</label>
+        <input
+          type="tel"
+          id="tel"
+          name="tel"
+          placeholder="06 12 34 56 78 ou +212 6 12 34 56 78"
+          autocomplete="tel"
+        />
+        <small class="message" id="tel-msg"></small>
+
+        <label for="prenom">nom complet de l'élève</label>
+        <input
+          type="text"
+          id="prenom"
+          name="prenom"
+          placeholder="nom complet de l'élève"
+        />
+
+        <label for="mdp">Mot de passe</label>
+        <input
+          type="password"
+          id="mdp"
+          name="mdp"
+          placeholder="8 caractères minimum"
+          autocomplete="new-password"
+        />
+        <small class="message" id="mdp-msg"></small>
+
+        <label for="mdp2">Confirmer le mot de passe</label>
+        <input
+          type="password"
+          id="mdp2"
+          name="mdp2"
+          placeholder="Retapez le mot de passe"
+          autocomplete="new-password"
+        />
+        <small class="message" id="mdp2-msg"></small>
+
+        <div class="cgv">
+          <input type="checkbox" id="consentement" name="consentement" />
+          <label for="consentement"
+            >J'accepte que mes données soient utilisées pour traiter cette
+            inscription.</label
+          >
+        </div>
+        <small class="message" id="consentement-msg"></small>
+
+        <small class="message" id="form-msg"></small>
+
+        <button type="submit" class="valider">Valider l'inscription →</button>
+      </form>
+
+      <section class="recap" id="recap" aria-live="polite" hidden>
+        <h2>Inscription confirmée</h2>
+        <p>Numéro de dossier : <strong id="recap-dossier"></strong></p>
+        <p>Élève : <strong id="recap-eleve"></strong></p>
+        <ul id="recap-cours"></ul>
+        <p>Total mensuel : <strong id="recap-total"></strong></p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-titre">
+        <h3>Nour Academy</h3>
+        <p>Inscription aux cours de soutien — Nador</p>
+      </div>
+      <ul>
+        <li>Nador Centre</li>
+        <li>Hay Al Matar</li>
+        <li>Selouane</li>
+      </ul>
+      <p class="copyright">© 2026 Nour Academy. Tous droits réservés.</p>
+    </footer>
+
+    <script src="js/data.js" defer></script>
+  </body>
+</html>
