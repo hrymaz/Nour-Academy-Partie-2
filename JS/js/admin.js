@@ -1,13 +1,30 @@
+
 const liste = document.querySelector("#liste-etudiants");
 
-async function getStudents() {
-    const response = await fetch("../../students.json");
-    const etudiants = await response.json();
+let etudiants = [];
 
-    afficherEtudiants(etudiants);
+async function getStudents() {
+    try {
+        const response = await fetch("../../students.json");
+
+        if (!response.ok) {
+            throw new Error("Fichier students.json introuvable");
+        }
+
+        etudiants = await response.json();
+
+        afficherEtudiants();
+    } catch (erreur) {
+        console.error(erreur);
+        liste.innerHTML = `
+            <tr>
+                <td colspan="8">Erreur de chargement des étudiants</td>
+            </tr>
+        `;
+    }
 }
 
-function afficherEtudiants(etudiants) {
+function afficherEtudiants() {
     liste.innerHTML = "";
 
     etudiants.forEach((etudiant) => {
@@ -19,10 +36,16 @@ function afficherEtudiants(etudiants) {
                 <td>${etudiant.dossier}</td>
                 <td>${etudiant.telephone}</td>
                 <td>${etudiant.statut}</td>
-                <td><span class="status actif">Actif</span></td>
+                <td>${etudiant.date}</td>
                 <td class="actions">
-                    <button class="btn-modifier">Modifier</button>
-                    <button class="btn-supprimer">Supprimer</button>
+                    <button class="btn-modifier"
+                        onclick="modifierEtudiant(${etudiant.id})">
+                        Modifier
+                    </button>
+                    <button class="btn-supprimer"
+                        onclick="supprimerEtudiant(${etudiant.id})">
+                        Supprimer
+                    </button>
                 </td>
             </tr>
         `;
