@@ -19,6 +19,7 @@ function afficherEtudiants(etudiants) {
                 <td>${etudiant.dossier}</td>
                 <td>${etudiant.telephone}</td>
                 <td>${etudiant.statut}</td>
+                <td><span class="status actif">Actif</span></td>
                 <td class="actions">
                     <button class="btn-modifier">Modifier</button>
                     <button class="btn-supprimer">Supprimer</button>
