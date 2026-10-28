@@ -5,7 +5,7 @@ let etudiants = [];
 
 async function getStudents() {
     try {
-        const response = await fetch("../../students.json");
+        const response = await fetch("../Data/students.json");
 
         if (!response.ok) {
             throw new Error("Fichier students.json introuvable");

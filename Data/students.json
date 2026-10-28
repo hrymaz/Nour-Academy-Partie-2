@@ -1,0 +1,23 @@
+
+[
+  {"id":1,"dossier":"NA-2026-001","eleve":"Yassine El Amrani","parent":"Karim El Amrani","telephone":"06 45 21 73 89","niveau":"Collège","cours":"Maths","statut":"Payée","date":"2026-09-14"},
+  {"id":2,"dossier":"NA-2026-002","eleve":"Salma Bouzid","parent":"Nadia Bouzid","telephone":"07 12 58 34 96","niveau":"2e Bac","cours":"Physique","statut":"Validée","date":"2026-09-15"},
+  {"id":3,"dossier":"NA-2026-003","eleve":"Omar Chakir","parent":"Hassan Chakir","telephone":"06 83 47 19 25","niveau":"Lycée","cours":"Chimie","statut":"En attente","date":"2026-09-16"},
+  {"id":4,"dossier":"NA-2026-004","eleve":"Lina Ouazzani","parent":"Samira Ouazzani","telephone":"07 64 29 51 38","niveau":"Primaire","cours":"Français","statut":"Payée","date":"2026-09-16"},
+  {"id":5,"dossier":"NA-2026-005","eleve":"Adam Benali","parent":"Rachid Benali","telephone":"06 27 95 63 14","niveau":"Lycée","cours":"Anglais","statut":"Validée","date":"2026-09-17"},
+  {"id":6,"dossier":"NA-2026-006","eleve":"Imane Haddad","parent":"Fatima Haddad","telephone":"07 38 16 82 47","niveau":"2e Bac","cours":"SVT","statut":"Payée","date":"2026-09-18"},
+  {"id":7,"dossier":"NA-2026-007","eleve":"Ayoub Lahlou","parent":"Mustapha Lahlou","telephone":"06 91 54 28 73","niveau":"Primaire","cours":"Arabe","statut":"En attente","date":"2026-09-18"},
+  {"id":8,"dossier":"NA-2026-008","eleve":"Sara Mansouri","parent":"Leila Mansouri","telephone":"07 25 68 41 93","niveau":"Collège","cours":"Informatique","statut":"Payée","date":"2026-09-19"},
+  {"id":9,"dossier":"NA-2026-009","eleve":"Mehdi Tazi","parent":"Abdelilah Tazi","telephone":"06 74 13 86 52","niveau":"Lycée","cours":"Maths","statut":"Validée","date":"2026-09-20"},
+  {"id":10,"dossier":"NA-2026-010","eleve":"Khadija Berrada","parent":"Youssef Berrada","telephone":"07 49 32 75 18","niveau":"Collège","cours":"Physique","statut":"Payée","date":"2026-09-21"},
+  {"id":11,"dossier":"NA-2026-011","eleve":"Ilyas Fassi","parent":"Zineb Fassi","telephone":"06 36 87 24 51","niveau":"Collège","cours":"SVT","statut":"En attente","date":"2026-09-22"},
+  {"id":12,"dossier":"NA-2026-012","eleve":"Hiba Alaoui","parent":"Driss Alaoui","telephone":"07 81 46 93 27","niveau":"Lycée","cours":"Français","statut":"Validée","date":"2026-09-23"},
+  {"id":13,"dossier":"NA-2026-013","eleve":"Zakaria Idrissi","parent":"Najat Idrissi","telephone":"06 58 29 71 64","niveau":"Collège","cours":"Maths","statut":"Payée","date":"2026-09-24"},
+  {"id":14,"dossier":"NA-2026-014","eleve":"Meryem Sebti","parent":"Omar Sebti","telephone":"07 16 73 48 95","niveau":"2e Bac","cours":"Physique","statut":"Payée","date":"2026-09-25"},
+  {"id":15,"dossier":"NA-2026-015","eleve":"Anas Kettani","parent":"Hamid Kettani","telephone":"06 42 95 17 83","niveau":"Lycée","cours":"Chimie","statut":"Validée","date":"2026-09-26"},
+  {"id":16,"dossier":"NA-2026-016","eleve":"Rania Zouhair","parent":"Amal Zouhair","telephone":"07 53 28 64 19","niveau":"Primaire","cours":"Français","statut":"En attente","date":"2026-09-28"},
+  {"id":17,"dossier":"NA-2026-017","eleve":"Bilal Cherkaoui","parent":"Said Cherkaoui","telephone":"06 79 31 56 42","niveau":"Lycée","cours":"Anglais","statut":"Payée","date":"2026-09-29"},
+  {"id":18,"dossier":"NA-2026-018","eleve":"Nora Benkirane","parent":"Hanane Benkirane","telephone":"07 24 85 19 63","niveau":"2e Bac","cours":"SVT","statut":"Validée","date":"2026-09-30"},
+  {"id":19,"dossier":"NA-2026-019","eleve":"Walid Naciri","parent":"Abdelkader Naciri","telephone":"06 63 47 92 15","niveau":"Primaire","cours":"Arabe","statut":"Payée","date":"2026-10-01"},
+  {"id":20,"dossier":"NA-2026-020","eleve":"Aya Belhaj","parent":"Mina Belhaj","telephone":"07 92 14 56 38","niveau":"Collège","cours":"Informatique","statut":"En attente","date":"2026-10-02"}
+]
