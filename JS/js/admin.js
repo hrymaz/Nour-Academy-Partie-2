@@ -30,7 +30,3 @@ function afficherEtudiants(etudiants) {
 }
 
 getStudents();
-
-
-
-
