@@ -1,5 +1,5 @@
 function modification(id, button) {
-    const etudiants = JSON.parse(localStorage.getItem("etudiants")) || [];
+    const etudiants = JSON.parse(localStorage.getItem("etudiants"));
     const etudiant = etudiants.find((elimant) => elimant.id === Number(id));
     const studant = button.parentElement.parentElement;
 
@@ -26,7 +26,7 @@ function modification(id, button) {
 }
 
 function supprimer(id) {
-    const etudiants = JSON.parse(localStorage.getItem("etudiants")) || [];
+    const etudiants = JSON.parse(localStorage.getItem("etudiants"));
     
     const nouveauxEtudiants = etudiants.filter(
         (etudiant) => etudiant.id !== Number(id)
