@@ -1,52 +1,90 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/admin.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/admin.css" />
     <title>Nour Academy - Dashboard</title>
-</head>
+  </head>
 
-<body>
-    
+  <body>
     <section class="content">
-
-        <div class="top">
-            <div>
-                <h1>Bienvenue dans Nour Academy</h1>
-            </div>
-
-            <input type="search" placeholder="Rechercher un étudiant...">
-        </div>
-        <div class="table-container">
-            <h2>Liste des étudiants</h2>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nom complet</th>
-                        <th>Niveau</th>
-                        <th>Classe</th>
-                        <th>Abonnement</th>
-                        <th>Nember</th>
-                        <th>Statut</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-
-                <tbody id="liste-etudiants">
-
-                </tbody>
-            </table>
+      <div class="top">
+        <div>
+          <h1>Bienvenue dans Nour Academy</h1>
         </div>
 
+        <input type="search" placeholder="Rechercher un étudiant..." />
+      </div>
+      <div class="table-container">
+        <div class="table-header">
+          <h2>Liste des étudiants</h2>
+          <button type="button" id="btn-ajouter" class="btn-ajouter">
+            + Ajouter un étudiant
+          </button>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nom complet</th>
+              <th>Niveau</th>
+              <th>Classe</th>
+              <th>Abonnement</th>
+              <th>Nember</th>
+              <th>Statut</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+
+          <tbody id="liste-etudiants">
+            <tr>
+              <td>Ahmed Amrani</td>
+              <td>2ème Bac</td>
+              <td>Mathématiques</td>
+              <td>350 MAD</td>
+              <td>0690362063</td>
+              <td><span class="status actif">Actif</span></td>
+              <td class="actions">
+                <button class="btn-modifier">Modifier</button>
+                <button class="btn-supprimer">Supprimer</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
     <script src="../JS/js/admin.js" defer></script>
     <script src="../JS/js/students.js" defer></script>
-     <script src="../JS/js/login.js"></script>
-     <script src="../JS/js/dashboard.js"></script>
-</body>
+    <script src="../JS/js/ajouter.js" defer></script>
+    <dialog id="modal">
+    <form id="form-ajout">
+        <h2>Ajouter un étudiant</h2>
 
+        <input name="eleve" placeholder="Nom complet" required>
+        <input name="parent" placeholder="Nom du parent" required>
+        <input name="telephone" placeholder="Téléphone" pattern="0[5-7][0-9]{8}" title="Ex : 0612345678" required>
 
+        <select name="niveau" required>
+            <option value="">-- Niveau --</option>
+            <option>Primaire</option>
+            <option>Collège</option>
+            <option>Lycée</option>
+            <option>2e Bac</option>
+        </select>
+
+        <input name="cours" placeholder="Cours" required>
+        <input name="Abonnement" placeholder="Abonnement"required>
+
+        <select name="statut" required>
+            <option>En attente</option>
+            <option>Validée</option>
+            <option>Payée</option>
+        </select>
+
+        <button type="button" id="btn-annuler">Annuler</button>
+        <button type="submit">Enregistrer</button>
+    </form>
+</dialog>
+  </body>
 </html>

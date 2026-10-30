@@ -1,13 +1,13 @@
 const liste = document.querySelector("#liste-etudiants");
 
 async function getStudents() {
-    let etudiants = JSON.parse(localStorage.getItem("etudiants"));
-    if (!etudiants) {
-        const response = await fetch("../Data/students.json");
-        etudiants = await response.json();
-        localStorage.setItem("etudiants", JSON.stringify(etudiants));
+    const response = await fetch("../Data/students.json");
+    if (!response.ok) {
+        throw new Error(`Impossible de charger les étudiants (${response.status})`);
     }
 
+    const etudiants = await response.json();
+    localStorage.setItem("etudiants", JSON.stringify(etudiants));
     afficherEtudiants(etudiants);
 }
 
@@ -30,7 +30,7 @@ function afficherEtudiants(etudiants) {
                         Modifier
                     </button>
                     <button class="btn-supprimer"
-                          onclick="supprimer(${etudiant.id})">
+                          onclick="supprimer(this)">
                         Supprimer
                     </button>
                 </td>

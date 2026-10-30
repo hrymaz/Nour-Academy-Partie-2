@@ -25,13 +25,6 @@ function modification(id, button) {
     }
 }
 
-function supprimer(id) {
-    const etudiants = JSON.parse(localStorage.getItem("etudiants"));
-    
-    const nouveauxEtudiants = etudiants.filter(
-        (etudiant) => etudiant.id !== Number(id)
-    );
-
-    localStorage.setItem("etudiants", JSON.stringify(nouveauxEtudiants));
-    location.reload();
+function supprimer(button) {
+    button.closest("tr").remove();
 }
